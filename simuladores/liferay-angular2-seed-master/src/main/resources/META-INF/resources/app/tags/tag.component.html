@@ -1,0 +1,15 @@
+<div class="content">
+  <div class="header-table">
+    <div class="tag" *ngFor="let tag of tags" [ngClass]="{ active: tag.text == activeTag }" (click)="setActiveTag(tag.text)">
+      <span class="num-tag">{{ tag.num }}</span>
+      <p class="text-tag">{{ tag.text }}</p>
+    </div>
+  </div>
+  <div class="table-component" *ngIf="activeTag == 'Tablas'">
+    <app-table [tableData]="tableData"></app-table>
+  </div>
+  <div class="graphic-component" *ngIf="activeTag == 'Gráficas'">
+    <app-bar-chart [barChartData]="barChartData"></app-bar-chart>
+    <app-line-chart [lineChartData]="lineChartData"></app-line-chart>
+  </div>
+</div>

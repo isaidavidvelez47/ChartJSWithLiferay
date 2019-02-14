@@ -1,0 +1,6 @@
+Bundle-Name: Colfondos_HerramientaMRFVPV
+Bundle-SymbolicName: co.com.colfondos.herramientapv
+Bundle-Version: 1.0.0
+Export-Package: co.com.colfondos.herramientapv.constants
+Liferay-JS-Config: /META-INF/resources/js/config.js
+Web-ContextPath: /herramienta-pv

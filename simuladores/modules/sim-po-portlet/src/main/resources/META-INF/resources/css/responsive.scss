@@ -1,0 +1,454 @@
+/** Responsive section **/
+@media only screen and (max-width: 1024px) {
+    .sim-po .currency_input {
+        background: white url("../assets/icon_peso.png") 2%/0.45em no-repeat;
+    }
+
+    .sim-po .form-container label input::-moz-placeholder {
+        // padding-top: 20px;
+        line-height: 37px;
+        opacity: 1;
+    }
+
+}
+/* Big Tablet */
+@media only screen and (max-width: 991px) {
+    .sim-po input,
+    .sim-po .custom-select select {
+        font-size: 12px;
+    }
+
+    .sim-po .form-container label .span {
+        font: 14px "open_sanssemibold";
+    }
+    .sim-po .container {
+        padding: 49px 60px;
+    }
+
+    .sim-po .graphic {
+        margin-top: 16px;
+        height: 640px;
+    }
+
+    .sim-po form {
+        padding: 65px 50px;
+    }
+    .sim-po .button-image img {
+        width: 60px;
+        height: 60px;
+    }
+    .sim-po .slider {
+        width: 100%;
+    }
+
+    .sim-po .form-container label input::-webkit-input-placeholder {
+        font: 12px "open_sanssemibold";
+    }
+    .sim-po .form-container label input:-ms-input-placeholder {
+        font: 12px "open_sanssemibold";
+    }
+    .sim-po .form-container label input::-ms-input-placeholder {
+        font: 12px "open_sanssemibold";
+    }
+
+    .sim-po .form-container label input::-moz-placeholder {
+        // padding-top: 20px;
+        font: 12px "open_sanssemibold";
+        line-height: 37px;
+    }
+
+    .sim-po .afp_type {
+        margin-top: -10px;
+        text-align: center;
+    }
+    .sim-po .afp_type .col-left {
+        width: 100%;
+        text-align: left;
+        padding-right: 10px;
+    }
+    .sim-po .afp_type .col-right {
+        display: block;
+        padding: 0 0 30px 0;
+        width: 100%;
+    }
+    .sim-po .afp_type .btn-afp:last-of-type {
+        margin-right: 0;
+    }
+    .sim-po .afp_type .btn-afp {
+        margin-right: 20px;
+    }
+    .sim-po .afp_type select {
+        width: 50%;
+        float: left;
+    }
+    .sim-po .btn-compare {
+        margin-top: 24px;
+    }
+    /* Vista AFP */
+    .sim-po .nav-link {
+        font-size: 14px;
+    }
+
+    .sim-po .graphic-text-container > div {
+        width: 33%;
+        font-size: 14px;
+    }
+
+    .sim-po .canvas-chart,
+    .sim-po .canvas-container {
+        height: 420px;
+    }
+
+    .sim-po .legend-container,
+    .sim-po .canvas-container {
+        width: 100%;
+    }
+
+    .sim-po .canvas-container {
+        padding-top: 8px;
+    }
+
+    .sim-po .legend-container {
+        margin-top: 0;
+
+        .labels-five {
+            width: 90%;
+        }
+
+        .labels-four {
+            width: 65%;
+        }
+
+        ul {
+            li {
+                //display: inline-block;
+                //margin: 0 10px 0 0;
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 13px;
+                }
+                span.chart-legend {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 15px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+/* Tablets */
+@media only screen and (max-width: 768px) {
+    .sim-po .container {
+        padding: 3em;
+    }
+
+    .sim-po form {
+        padding: 48px 25px 0;
+    }
+    .sim-po .graphic {
+        height: 600px;
+    }
+    .sim-po .afp_type .col-left {
+        padding-right: 0;
+    }
+    .sim-po .afp_type .types {
+        display: block;
+        text-align: center;
+    }
+    .sim-po .afp_type .btn-afp {
+        margin-bottom: 20px;
+        display: inline-block;
+        width: 30%;
+        margin-right: 17px;
+    }
+    .sim-po .afp_type .btn-afp:last-of-type {
+        margin-right: 17px;
+    }
+    .sim-po img.img-afp {
+        width: 90%;
+    }
+
+    .sim-po .mandatory-text {
+        margin-top: -24px;
+        padding-bottom: 24px;
+    }
+
+    .sim-po .canvas-chart,
+    .sim-po .canvas-container {
+        height: 380px;
+    }
+    .sim-po .canvas-container {
+        padding-top: 8px;
+    }
+    .sim-po .legend-container,
+    .sim-po .canvas-container {
+        width: 100%;
+    }
+    .sim-po .legend-container {
+        .labels-five {
+            width: 100%;
+        }
+
+        ul {
+            padding-left: 0;
+            li {
+                //display: inline-block;
+                //margin: 0 10px 0 0;
+                span {
+                    font-size: 12px;
+                }
+                span.chart-legend {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 10px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+/* Tablets */
+@media only screen and (max-width: 640px) {
+    .sim-po .currency_input {
+        background: white url("../assets/icon_peso.png") 1.3%/0.45em no-repeat;
+    }
+
+    .sim-po .container {
+        padding: 30px 20px;
+    }
+    .sim-po form {
+        padding: 32px 24px 0;
+    }
+    .sim-po .col-right {
+         //width: 100%;
+         padding-left: 0;
+         padding-top: 0;
+     }
+    .sim-po .gender-age .col-left {
+        padding-bottom: 20px;
+    }
+    .sim-po .col-left {
+        padding-right: 0;
+        //width: 100%;
+    }
+    .sim-po .age-content {
+        margin-top: 20px;
+    }
+    .sim-po .afp_type {
+        margin-top: -20px;
+    }
+    .sim-po .afp_type select {
+        width: 100%;
+    }
+    .sim-po .afp_type h2 {
+        text-align: left;
+    }
+
+    .sim-po .graphic-text-container > div {
+        width: 50%;
+        font-size: 13px;
+    }
+
+    .sim-po .legend-container,
+    .sim-po .canvas-container {
+        width: 100%;
+    }
+    .sim-po .canvas-chart,
+    .sim-po .canvas-container {
+        height: 360px;
+    }
+    .sim-po .canvas-container {
+        padding-top: 8px;
+    }
+
+    .sim-po .legend-container {
+        ul {
+            padding-left: 0;
+            li {
+                //display: inline-block;
+                //margin: 0 10px 0 0;
+                margin-bottom: 0.5em;
+                span {
+                    font-size: 10px;
+                }
+                span.chart-legend {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 10px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+/* Big Phones */
+@media only screen and (max-width: 520px) {
+    .sim-po .graphic {
+        height: 580px;
+    }
+
+    .sim-po .afp_type h2 {
+        margin-bottom: 32px;
+    }
+
+    .sim-po .parameters {
+        padding-top: 48px;
+        clear: both;
+    }
+
+    .sim-po .currency_input {
+        background: white url("../assets/icon_peso.png") 2%/0.45em no-repeat;
+    }
+
+    .sim-po .col-right,
+    .sim-po .col-left {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 0;
+    }
+    .sim-po .gender-age .col-left {
+        padding-bottom: 20px;
+    }
+
+    .sim-po .row-flex .custom-select,
+    .sim-po .row-flex .currency_input {
+        width: 100%;
+    }
+
+    .sim-po .afp_type .btn-afp {
+        margin-bottom: 5px;
+        width: 46%;
+        margin-right: 0;
+    }
+    .sim-po .afp_type .btn-afp:last-of-type {
+        margin-right: 0;
+    }
+    .sim-po .container {
+        padding: 30px 0;
+    }
+
+    .sim-po .graphic-container {
+        box-shadow: none;
+    }
+
+    .sim-po .title,
+    .sim-po .description {
+        padding: 16px;
+    }
+
+    .sim-po .form-container {
+        box-shadow: none;
+    }
+
+    .sim-po .nav {
+        padding: 0;
+    }
+
+    .sim-po .nav-link-mb {
+        display: block;
+        padding-bottom: 12px;    // Padding - Border = 9px
+        text-decoration: none;
+        text-align: center;
+        font-family: "open_sanssemibold";
+
+        span {
+            padding: 1px 8px;
+            color: white;
+            background-color: #999999;
+            border-radius: 16px;
+        }
+    }
+
+    .sim-po .nav-link-mb.active {
+        border-bottom: 3px solid #005276;
+
+        span {
+            background: #005276;
+        }
+    }
+
+    .sim-po .graphic-text-container > div {
+        width: 50%;
+        font-size: 12px;
+    }
+
+    .sim-po .nav-link {
+        display: none;
+    }
+    .sim-po .title-option {
+        display: block;
+        margin: 16px 16px 8px;
+        font-family: "open_sansregular";
+        font-size: 14px;
+        text-align: center;
+    }
+    .sim-po .nav-item {
+        width: 33%;
+    }
+    .sim-po .canvas-container {
+        height: 320px;
+    }
+    .sim-po .legend-container {
+        padding-left: 0;
+
+        ul {
+            padding-left: 0;
+        }
+    }
+    .sim-po .canvas-chart {
+        height: 320px;
+    }
+
+    .sim-po .legend-container {
+        .labels-five,
+        .labels-four {
+            width: 100%;
+
+            li {
+                width: 50%;
+            }
+            li:nth-child(5){
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Medium Phones */
+@media only screen and (max-width: 360px) {
+    .sim-po .graphic-text-container > div {
+        font-size: 11px;
+    }
+}
+
+/* Medium Phones */
+@media only screen and (max-width: 320px) {
+    .sim-po .graphic {
+        height: 640px;
+    }
+
+    .sim-po .legend-container {
+        .labels-five,
+        .labels-four {
+            width: 50%;
+            margin: 0 auto;
+
+            li,
+            li:nth-child(5){
+                width: 100%;
+            }
+        }
+    }
+
+    .sim-po .graphic-text-container > div {
+        font-size: 10px;
+    }
+}

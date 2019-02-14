@@ -1,0 +1,6 @@
+Bundle-Name: wsclient-funcionario
+Bundle-SymbolicName: co.com.colfondos.tech.ws.cliente.funcionario
+Bundle-Version: 1.0.0
+Export-Package: \
+	co.com.colfondos.tech.ws.cliente.funcionario.facade,\
+	co.com.colfondos.tech.ws.cliente.funcionario.service_funcionario\

@@ -1,0 +1,1004 @@
+/* Primera vista */
+
+body {
+    margin: 0;
+}
+
+.sim-pv header img {
+    width: 100%;
+}
+
+.sim-pv .container {
+    width: 100%;
+    margin: 0;
+    padding: 57px 109px;
+    background: #F6F6F6;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.sim-pv .description {
+    line-height: 25px;
+    font-family: 'open_sansregular';
+    font-size: 14px;
+}
+
+.sim-pv .options-container {
+    margin: 43px 97px;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.sim-pv .comparativo {
+    width: 49%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 47px 43px 47px 15%;
+    font-family: 'open_sanssemibold';
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    //background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    //background: white url("../assets/icono_compare.png") 15%/10% no-repeat;
+    background: white;
+
+    .text {
+        display: inline-block;
+        width: 100%;
+    }
+
+    div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 10%;
+        margin: auto 0;
+        width: 65px;
+        height: 65px;
+        padding: 16px;
+        background: #F6F6F6;
+    }
+}
+
+.sim-pv .comparativo:hover {
+    cursor: pointer;
+}
+
+.sim-pv .comparativo:hover:after,
+.sim-pv .comparativo:focus:after,
+.sim-pv .comparativo.active:after {
+    opacity: 1;
+    width: 100%;
+}
+
+.sim-pv .comparativo::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    line-height: 0;
+    position: absolute;
+    height: 4px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: width 0.5s ease 0s, height 0.5s ease 0s;
+    transition: width 0.5s ease 0s, height 0.5s ease 0s;
+    width: 5px;
+    margin: auto;
+    z-index: 9;
+    background: #005276;
+}
+
+/* Comparativo mix */
+.sim-pv .title {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 28px;
+    font-family: 'open_sanssemibold';
+    margin-bottom: 60px;
+}
+
+.parameters {
+    display: block;
+    // justify-content: space-between;
+}
+
+.sim-pv .amount_input,
+.sim-pv .date_input,
+.sim-pv .custom-select {
+    position: relative;
+    width: 46%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 34px;
+    height: 40px;
+    background: #FFFFFF;
+    display: inline-block;
+}
+
+.sim-pv .parameters>div:nth-child(2n) {
+    float: right;
+}
+
+/* Select styles */
+.sim-pv .custom-select {
+
+    select {
+        width: 100%;
+        height: 100%;
+        padding-left: 16px;
+        border: 0;
+        border-image: initial;
+        border-radius: 5px;
+        outline: none;
+        font: 14px 'open_sanssemibold';
+        color: #999;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        background: white url("../assets/icon_arrow.png") 97%/0.9em no-repeat;
+    }
+
+    select.date {
+        background: white url("../assets/icon_arrow.png") 97%/0.9em no-repeat;
+    }
+}
+
+.sim-pv .custom-select select::-ms-expand {
+    display: none;
+}
+
+.sim-pv label {
+    height: 100%;
+    width: 100%;
+}
+
+.sim-pv .amount_input {
+    background: white url("../assets/icon_peso.png") 1.5%/0.45em no-repeat;
+}
+
+.sim-pv .form input {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+    font-family: 'open_sansregular';
+    color: #333;
+    background: transparent;
+}
+
+.sim-pv input[type=number]::-webkit-inner-spin-button,
+.sim-pv input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sim-pv input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.sim-pv input[type="date"] {
+    width: 100%;
+    border: 0;
+    padding-right: 10px;
+    color: black;
+}
+
+.sim-pv .form label .span,
+.sim-pv .custom-select .span {
+    color: #005276;
+    font: 14px 'open_sanssemibold';
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.sim-pv .custom-select .span-active {
+    opacity: 1;
+    top: -25px;
+    line-height: 1;
+    background: transparent;
+    padding: 3px 0;
+}
+
+.sim-pv .form label input::placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    font: 14px 'open_sanssemibold';
+}
+
+.sim-pv .form label input::-webkit-input-placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    font: 14px 'open_sanssemibold';
+}
+
+.sim-pv .form label input::-moz-placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    font: 14px 'open_sanssemibold';
+    // padding-top: 20px;
+    line-height: 38px;
+    opacity: 1;
+}
+
+.sim-pv .form label input:-ms-input-placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    opacity: 1;
+    font: 14px 'open_sanssemibold';
+}
+
+.sim-pv .form label input::-ms-input-placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    opacity: 1;
+    font: 14px 'open_sanssemibold';
+}
+
+.sim-pv .form label input:focus,
+.sim-pv .form label input.populated {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.sim-pv .form label input:focus::-webkit-input-placeholder,
+.sim-pv .form label input.populated::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.sim-pv .form label input:focus:-ms-input-placeholder,
+.sim-pv .form label input.populated:-ms-input-placeholder {
+    color: transparent;
+}
+
+.sim-pv .form label input:focus::-ms-input-placeholder,
+.sim-pv .form label input.populated::-ms-input-placeholder {
+    color: transparent;
+}
+
+.sim-pv .form label input:focus::placeholder,
+.sim-pv .form label input.populated::placeholder {
+    color: transparent;
+}
+
+.sim-pv .form label input:focus+span,
+.sim-pv .form label input.populated+span {
+    opacity: 1;
+    top: -25px;
+    line-height: 1;
+    background: transparent;
+    padding: 3px 0;
+}
+
+.sim-pv .icon-date {
+    position: absolute;
+    width: 24px;
+    /* height: 20px; */
+    right: 2%;
+    top: 8px;
+}
+
+.sim-pv .tables-graphics {
+    margin-top: 48px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    display: none;
+}
+
+.sim-pv .nav {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.sim-pv .nav:before {
+    content: "";
+    background: #ccc;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+}
+
+.sim-pv .nav-item {
+    position: relative;
+    margin-top: 0;
+    list-style: none;
+    width: 50%;
+}
+
+.sim-pv .nav-link-mb {
+    display: none;
+}
+
+.sim-pv .nav-link-disabled,
+.sim-pv .nav-link {
+    position: relative;
+    padding: 0;
+    display: block;
+    font-size: 15px;
+    color: #999;
+    text-decoration: none;
+    font-family: 'open_sanssemibold';
+}
+
+.sim-pv .nav-link::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    line-height: 0;
+    position: absolute;
+    height: 3px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: width 0.5s ease 0s, height 0.5s ease 0s;
+    transition: width 0.5s ease 0s, height 0.5s ease 0s;
+    width: 5px;
+    margin: auto;
+    z-index: 9;
+    background: #005276;
+}
+
+.sim-pv .nav-link:hover:after,
+.sim-pv .nav-link:focus:after,
+.sim-pv .nav-link.active:after {
+    opacity: 1;
+    width: 100%;
+}
+
+.sim-pv .nav-item:hover:after,
+.sim-pv .nav-item:focus:after {
+    opacity: 1;
+    width: 100%;
+    cursor: default;
+}
+
+.sim-pv .nav-link-disabled,
+.sim-pv .nav-link{
+    p {
+        width: 25px;
+        margin: 0 8px 0 0;
+        padding: 4px;
+        background-color: #999999;
+        color: #fff;
+        font-size: 14px;
+        display: inline-block;
+        border-radius: 15px;
+        vertical-align: middle;
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        font-family: open_sanssemibold;
+    }
+
+    button {
+        width: 100%;
+        padding: 16px;
+        background-color: transparent;
+        border: none;
+        line-height: 30px;
+    }
+
+    button:focus {
+        outline: none;
+        background-color: transparent;
+    }
+}
+
+.sim-pv .nav-link.active {
+    color: #333;
+    cursor: default;
+
+    p {
+        background-color: #005276;
+    }
+}
+
+.sim-pv .nav-link-disabled {
+    background: #eee;
+}
+
+.sim-pv .nav-item:focus,
+.sim-pv a {
+    background: transparent;
+}
+
+.sim-pv .nav-link.active:hover {
+    cursor: default;
+
+}
+
+.sim-pv .nav-link:hover{
+//.sim-pv .nav-link:focus {
+    color: #333;
+    cursor: pointer;
+    background: transparent;
+
+    p {
+        background-color: #005276;
+
+    }
+}
+
+.sim-pv .nav-link.active p {
+    background: #005276;
+}
+
+
+/* ==============================================
+ * Tables styles
+ *===============================================*/
+.sim-pv .container-table {
+    padding: 40px 32px 10px;
+}
+
+.sim-pv .t-normal {
+    margin-bottom: 32px;
+}
+
+.sim-pv .mix .container-table > table {
+    margin-bottom: 2em;
+}
+
+.sim-pv .table {
+    width: 100%;
+    margin-bottom: 8px;
+    font-family: 'open_sansregular';
+    font-size: 14px;
+    color: #777;
+
+    border-collapse: initial;
+}
+
+.sim-pv div.single-table:first-child {
+    margin-top: 16px;
+}
+
+.sim-pv div.single-table:last-child {
+    margin-bottom: 32px;
+}
+
+.sim-pv .single-table {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-top: 48px;
+}
+
+.sim-pv .title-table {
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    background: #e3e4e5;
+
+    color: #333;
+    font-family: 'open_sansregular';
+    font-weight: 700;
+    text-align: center;
+
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.sim-pv .title-table:before {
+    content: '';
+    height: 5px;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: #d8126a;
+    background: -moz-linear-gradient(left, #d8126a, #005276, #33a300, #009ddb, #ff9600);
+    background: -webkit-linear-gradient(left, #d8126a, #005276, #33a300, #009ddb, #ff9600);
+    background: -o-linear-gradient(left, #d8126a, #005276, #33a300, #009ddb, #ff9600);
+    background: -ms-linear-gradient(left, #d8126a, #005276, #33a300, #009ddb, #ff9600);
+    background: linear-gradient(to right, #d8126a, #005276, #33a300, #009ddb, #ff9600);
+}
+
+.sim-pv .title-table.resume {
+    height: 5px;
+}
+
+/*
+.sim-pv .title-table td:nth-child(2):after,
+.sim-pv .title-table td:nth-child(2):before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    width: 25%;
+    height: 24px;
+    border-top: 1px solid #ccc;
+}
+
+.sim-pv .title-table td:nth-child(2):before {
+    left: 0;
+    border-left: 1px solid #ccc;
+}
+
+
+.sim-pv .title-table td:nth-child(2):after {
+    right: 0;
+    border-right: 1px solid #ccc;
+}
+*/
+
+.sim-pv .table-header {
+    height: 72px;
+    background-color: #e3e4e5;
+    //box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.sim-pv .table .table-header td {
+    color: #333;
+    font-family: 'open_sansregular';
+    font-weight: 700;
+    border-bottom: none;
+    border-top: none;
+    //width: 10%;
+}
+
+.sim-pv .table thead {
+    .border-cell td {
+        height: 5px;
+        background: #d8126a;
+        background: -moz-linear-gradient(left, #d8126a, #005276, #33a300, #009ddb, #ff9600);
+        background: -webkit-linear-gradient(left, #d8126a, #005276, #33a300, #009ddb, #ff9600);
+        background: -o-linear-gradient(left, #d8126a, #005276, #33a300, #009ddb, #ff9600);
+        background: -ms-linear-gradient(left, #d8126a, #005276, #33a300, #009ddb, #ff9600);
+        background: linear-gradient(to right, #d8126a, #005276, #33a300, #009ddb, #ff9600);
+    }
+}
+
+.sim-pv tbody tr:nth-child(2) td {
+    border-top: 1px solid #fff;
+}
+
+.sim-pv .table thead tr:last-child td {
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.sim-pv tr td:first-of-type {
+    padding-left: 20px;
+    width: 20%;
+}
+
+.sim-pv tbody tr td:first-of-type {
+    font-family: open_sanssemibold;
+    border-left: 1px solid white;
+}
+
+.sim-pv tbody tr {
+    background: #fafafa;
+}
+
+.sim-pv .table-header td:not(:first-of-type) {
+    text-align: center;
+}
+
+.sim-pv .table tbody {
+    position: relative;
+}
+
+.sim-pv .table tr td {
+    height: 50px;
+    vertical-align: middle;
+    border-bottom: 1px solid #fff;
+    border-top: none;
+    border-right: 1px solid #fff;
+}
+
+.sim-pv .table tr td:not(:first-of-type) {
+    text-align: center;
+}
+
+.sim-pv .table tr td:last-child {
+    padding: 0 1em;
+}
+
+.sim-pv .mix .container-table tbody tr td:last-of-type {
+    font-family: "open_sansregular";
+    font-weight: bold;
+    color: black;
+    width: 15%;
+}
+
+// Colors
+#row_colf_r td:first-of-type,
+#row_colf_v td:first-of-type {
+    box-shadow: inset 4px 0 rgba(0, 160, 234,1);
+}
+
+
+.sim-pv .mix {
+    .colfondos {
+        tbody {
+            background-color: #F6F6F6;
+        }
+
+        .table-header td:first-child {
+            box-shadow: inset 0.4em 0 rgba(0, 160, 234,1);
+        }
+
+        .row-rent {
+            background-color: rgba(0, 160, 234, 0.1);
+        }
+    }
+
+    .proteccion {
+        tbody {
+            background-color: #F6F6F6;
+        }
+
+        .table-header td:first-child {
+            box-shadow: inset 0.4em 0 rgba(239, 200, 70, 1);
+        }
+
+        .row-rent {
+            background-color: rgba(239, 200, 70, .1);
+        }
+    }
+
+    .porvenir {
+        tbody {
+            background-color: #F6F6F6;
+        }
+
+        .table-header td:first-child {
+            box-shadow: inset 0.4em 0 rgba(205, 110, 51,1);
+        }
+
+        .row-rent {
+            background-color: rgba(205, 110, 51, .1);
+        }
+    }
+
+    .oldMutual {
+        tbody {
+            background-color: #F6F6F6;
+        }
+
+        .table-header td:first-child {
+            box-shadow: inset 0.4em 0 rgba(0, 102, 53, 1);
+        }
+
+        .row-rent {
+            background-color: rgba(0, 102, 53, .1);
+        }
+    }
+
+    .row-rent {
+        color: black;
+        font-family: open_sanssemibold;
+    }
+}
+
+
+.sim-pv .container-table .tfoot-error {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 2em;
+}
+
+// Table inputs
+.sim-pv #table_colfondos .table-input {
+    border: 1px solid #ccc;
+}
+
+.sim-pv .table-input {
+    border-radius: 4px;
+    text-align: center;
+    padding: 0.5em 0;
+    font-family: "open_sansregular";
+    font-weight: normal;
+
+    input {
+        width: 2em;
+        border: none;
+        text-align: center;
+        background: transparent;
+    }
+    input:focus {
+        outline: none;
+    }
+}
+
+.sim-pv .selected-cells {
+    background-color: rgba(0, 82, 118, 0.15);
+}
+
+
+/* Comparison container */
+
+.sim-pv .container-resume {
+    padding: 40px 32px 10px;
+    display: none;
+}
+
+
+/* Buttons */
+
+.sim-pv .buttons-container {
+    width: 50%;
+    margin: 0 auto 32px;
+    text-align: center;
+    button {
+        margin: 0 8px;
+        border: 2px solid #005276;
+        border-radius: 20px;
+        //background-color: transparent;
+        padding: 8px 48px;
+        //color: #005276;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        -webkit-transition: background-color linear 0.3s;
+        transition: background-color linear 0.3s;
+    }
+    button:hover {
+        background-color: #005276;
+        color: white;
+    }
+    button:focus {
+        outline: none;
+    }
+}
+
+.sim-pv .button-active {
+    background-color: #005276;
+    color: white;
+}
+
+.sim-pv .button-no-active {
+    background-color: transparent;
+    color: #005276;
+}
+
+
+/* ==================================================
+ * Graph Styles
+ ====================================================*/
+.sim-pv .container-graphs {
+    padding: 40px 32px 10px;
+}
+
+.sim-pv .graphic {
+    width: 100%;
+    min-height: 550px;
+}
+
+.sim-pv .graph-title {
+    width: 75%;
+    margin-bottom: 16px;
+    font-family: 'open_sansregular';
+    font-weight: 700;
+    font-size: 18px;
+    color: #333333;
+    text-align: center;
+}
+
+.sim-pv .canvas-container {
+    width: 75%;
+    height: 460px;
+    vertical-align: top;
+    float: left;
+}
+
+.sim-pv .legend-container,
+.sim-pv .legend-container-mix {
+    width: 25%;
+    vertical-align: top;
+    margin-top: 16px;
+    float: right;
+    ul {
+        padding-left: 16px;
+        list-style: none;
+    }
+    li {
+        margin-bottom: 16px;
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 13px;
+            span {
+                font-family: 'open_sansregular';
+                font-weight: 700;
+            }
+        }
+        span.chart-legend {
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.sim-pv #legend_bar_container {
+    position: relative;
+}
+
+.sim-pv .show-legend {
+    display: none;
+}
+
+.sim-pv .sup-legend-container {
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: space-around;  // Workaround for IE 11
+    font-size: 13px;
+
+    .legend-dashed,
+    .legend-square {
+        display: flex;
+        align-items: center;
+    }
+
+    .legend-square div {
+        width: 30px;
+        height: 13px;
+        content: "";
+        background: rgb(0, 164, 200);
+        margin-right: 4px;
+    }
+
+    .legend-dashed div {
+        width: 55px;
+        height: 3px;
+        background-image: linear-gradient(to right, #333 50%, rgba(255, 255, 255, 0) 0%);
+        background-position: top;
+        background-size: 18px 3px;
+        background-repeat: repeat-x;
+    }
+}
+
+
+//-------------------------------
+// Styles to hide and show
+//------------------------------
+.sim-pv .hidden {
+    display: none;
+}
+
+.sim-pv .visible {
+    display: block;
+}
+
+.sim-pv .visible-table {
+    display: table;
+}
+
+.sim-pv .visible-row {
+    display: table-row;
+}
+
+/** Format autofill background **/
+@-webkit-keyframes autofill {
+    to {
+        color: black;
+        background: transparent;
+    }
+}
+
+.sim-pv input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+//-----------------------------
+// Tooltip
+//-----------------------------
+.sim-pv .input-tooltip {
+    width: 100%;
+}
+
+.sim-pv .form-tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 8px;
+    background: #005276;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    width: 20px;
+    border: 2px solid rgba(0, 82, 118, 0.7);
+    border-radius: 50%;
+    font-size: 9px;
+    font-weight: bold;
+
+}
+
+.sim-pv .form-tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #005276;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1em 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    font-size: 11px;
+    font-weight: normal;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sim-pv .form-tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #005276 transparent transparent transparent;
+}
+
+.sim-pv .form-tooltip:hover {
+    background: #009ddb;
+    border-color: #009ddb;
+    cursor: pointer;
+    .tooltip-text {
+        opacity: 1;
+        visibility: visible;
+        cursor: pointer;
+    }
+}
+
+.sim-pv .error-container {
+    display: none;
+    width: 60%;
+    margin: 1em auto 0;
+    padding: 1em;
+    //border: 2px solid red;
+    //border-radius: 5px;
+    text-align: center;
+    color: red;
+    font-size: 16px;
+}
+
+.sim-pv .error-container.visible {
+    display: block;
+}

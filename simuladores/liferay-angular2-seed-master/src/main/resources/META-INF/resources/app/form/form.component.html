@@ -1,0 +1,54 @@
+<div class="form-sections">
+  <div class="first-row">
+    <div class="price-section">
+      <label for="price">Monto de inversión</label>
+      <div class="flex">
+        <span class="currency-input">&nbsp;$</span>
+        <input type="text" id="price" [(ngModel)]="price" (ngModelChange)="formatPrice()"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+      </div>
+    </div>
+    <div class="date-section">
+      <div class="initial-date-section">
+        <label for="initial">Fecha inicial</label>
+        <div class="icono-calendar">
+          <input type="text" id="initial" class="input-disabled cursor-no-drop" disabled readonly [(ngModel)]="initialDate">
+          <i class="far fa-calendar-alt cursor-no-drop"></i>
+        </div>
+      </div>
+      <div class="final-date-section">
+        <label for="final">Fecha final</label>
+        <div class="icono-calendar">
+          <input type="text" id="final" (click)="openCalendar()" readonly [(ngModel)]="finalDate">
+          <i class="far fa-calendar-alt" (click)="openCalendar()" [ngClass]="{ active: showCalendar }"></i>
+        </div>
+      </div>
+      <div class="container-calendar">
+        <div class="calendar" *ngIf="showCalendar">
+          <div class="section-year">
+            <div class="prev-arrow"><i class="fas fa-angle-left" (click)="changeYear(false)"></i></div>
+            <p> {{ year }} </p>
+            <div class="next-arrow"><i class="fas fa-angle-right" (click)="changeYear(true)"></i></div>
+          </div>
+          <div class="section-months">
+            <div class="month" *ngFor="let month of months"
+              [ngClass]="{ active: month.active, disabled: !month.active }" (click)="selectMonth(month)">
+              {{ month.name }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="second-row">
+    <div class="option-section">
+      <label for="option">Opciones</label>
+      <div class="buttons-option">
+        <button [ngClass]="{ active: option.textButton == activeButton }" class="option-button"
+          *ngFor="let option of options" (click)="setActiveOption(option)">{{option.textButton}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="button-section">
+  <button type="button" (click)="calculate()">Calcular</button>
+</div>

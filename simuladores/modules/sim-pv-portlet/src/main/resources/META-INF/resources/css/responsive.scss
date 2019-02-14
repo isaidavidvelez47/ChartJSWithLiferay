@@ -1,0 +1,692 @@
+/** Responsive section **/
+
+/* Big Tablet */
+@media only screen and (max-width: 1024px) {
+    /* vista index */
+    .sim-pv .container {
+        padding: 25px 20px;
+    }
+
+    .sim-pv .container-table {
+        position: relative;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .sim-pv .options-container {
+        margin: 43px 0;
+    }
+    .sim-pv .comparativo {
+        padding: 35px 30px 35px 15%;
+    }
+    .sim-pv .icon-comparative {
+        left: 10px;
+        top: 30px;
+    }
+    /* vista comparativo  */
+    .parameters {
+        display: block;
+    }
+    .sim-pv .amount_input,
+    .sim-pv .date_input,
+    .sim-pv .custom-select {
+        width: 48%;
+        display: inline-block;
+    }
+    .sim-pv .amount_input,
+    .sim-pv .custom-select {
+        margin-right: 1%;
+    }
+    .sim-pv .date_input {
+        margin-left: 1%;
+    }
+    .sim-pv .tables-graphics {
+        margin-top: 0;
+    }
+    .sim-pv .container-table {
+        padding: 40px 0 5px;
+    }
+    .sim-pv .table {
+        margin-bottom: 30px;
+    }
+
+    .sim-pv .buttons-container {
+        width: 70%;
+    }
+
+    .sim-pv .nav-item:focus,
+    .sim-pv a {
+        background: transparent;
+    }
+
+    .sim-pv .sup-legend-container {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 970px){
+    .sim-pv .graph-title {
+        margin-top: 16px;
+        width: 100%;
+    }
+
+    .sim-pv .show-legend {
+        display: block;
+    }
+
+    .sim-pv #legend_bar_container {
+        position: inherit;
+    }
+
+    .sim-pv .canvas-container {
+        width: 100%;
+        float: none;
+    }
+
+    .sim-pv .sup-legend-container {
+        width: 100%;
+    }
+
+    .sim-pv .legend-container {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 16px;
+        float: none;
+
+        ul {
+
+            padding-left: 0;
+            li {
+                display: inline-block;
+                margin: 0 12px 0 0;
+                text-align: center;
+
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 11px;
+                    text-align: left;
+                }
+                span.chart-legend {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 15px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .sim-pv .legend-container-mix {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 16px;
+
+        ul {
+            padding-left: 0;
+            li {
+                display: inline-block;
+                margin: 0 8px 0 0;
+                text-align: left;
+
+                span {
+                    font-size: 14px;
+                }
+                span.chart-legend {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 15px;
+                    margin-right: 5px;
+                }
+            }
+
+            li:nth-child(2) {
+                margin-left: 8px;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .sim-pv .table {
+        font-size: 12px;
+    }
+}
+
+/* Tablets */
+@media only screen and (max-width: 768px) {
+    .sim-pv .comparativo {
+        padding: 25px 20px 25px 15%;
+        font-size: 15px;
+
+        div {
+            left: 7%;
+            height: 60px;
+            width: 60px;
+        }
+    }
+
+    .sim-pv .nav-item:focus,
+    .sim-pv a {
+        background: transparent;
+    }
+
+    .sim-pv .icon-comparative {
+        left: 5px;
+        top: 16px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .sim-pv .buttons-container {
+        width: 80%;
+    }
+
+    .sim-pv .table tr td {
+        height: 56px;
+    }
+
+    .sim-pv .title-table td:nth-child(2):after,
+    .sim-pv .title-table td:nth-child(2):before {
+        top: 28px;
+    }
+
+    .sim-pv .title-table td:nth-child(2):after,
+    .sim-pv .title-table td:nth-child(2):before {
+        content: "";
+        width: 20%;
+    }
+
+    .sim-pv .container-graphs {
+        padding: 24px;
+    }
+
+    .sim-pv .graphic {
+        height: 600px;
+    }
+
+    .sim-pv .sup-legend-container {
+        font-size: 10px;
+    }
+
+}
+
+/* Responsive Tables on devices with screen lower than 768px */
+@media only screen and (max-width: 767px) {
+    // Inputs and selects fonts
+    .sim-pv .form label .span,
+    .sim-pv .custom-select select,
+    .sim-pv .custom-select .span {
+        font-size: 12px;
+    }
+
+    .sim-pv .custom-select select {
+        padding-left: 8px;
+    }
+
+    // Labels font size
+    .sim-pv .form label input::placeholder {
+        font-size: 12px;
+    }
+
+    .sim-pv .form label input::-webkit-input-placeholder {
+        font-size: 12px;
+    }
+
+    .sim-pv .form label input::-moz-placeholder {
+        font-size: 12px;
+    }
+
+    .sim-pv .form label input:-ms-input-placeholder {
+        font-size: 12px;
+    }
+
+    .sim-pv .form label input::-ms-input-placeholder {
+        font-size: 12px;
+    }
+
+    // Responsive tables
+    /*
+    .sim-pv .mix {
+        .colfondos {
+            .table-header td:first-child {
+                box-shadow: inset 0.4em 0 rgb(0, 82, 118), 1px 0 #bbb;
+            }
+        }
+        .proteccion {
+            .table-header td:first-child {
+                box-shadow: inset 0.4em 0 rgb(227, 230, 35), 1px 0 #bbb;
+            }
+        }
+        .porvenir {
+            .table-header td:first-child {
+                box-shadow: inset 0.4em 0 rgb(201,150,72), 1px 0 #bbb;
+            }
+        }
+        .oldMutual {
+            .table-header td:first-child {
+                box-shadow: inset 0.4em 0 rgb(110, 171, 36), 1px 0 #bbb;
+            }
+        }
+    }*/
+
+    .sim-pv table.responsive { margin-bottom: 0; }
+
+    .sim-pv .pinned {
+        position: absolute; left: 0; top: 0; background: #fff; width: 40%;
+        overflow: hidden;
+        //border-right: none; border-left: none;
+    }
+    .sim-pv .pinned table thead,
+    .sim-pv .pinned table tfoot {
+        border-right: none; border-left: none; width: 100%;
+    }
+
+    .sim-pv .pinned table tbody {
+        border-right: 1px solid #999;
+        border-left: none;
+        width: 100%;
+
+        tr.table-header td:first-of-type {
+            padding-left: 1em;
+        }
+    }
+
+    .sim-pv .pinned table tbody tr td {
+        -webkit-border-end: 1px solid #999;
+        border-right: 1px solid #999;
+
+        border-left: none;
+        padding-left: 1em;
+    }
+
+    .sim-pv .pinned table th,
+    .sim-pv .pinned table td { white-space: normal; }
+
+    .sim-pv .pinned td:last-child { border-bottom: 0; }
+
+    .sim-pv .table tfoot tr td span{
+        font-size: 14px;
+    }
+
+    .sim-pv .mix .scrollable .colfondos,
+    .sim-pv .mix .scrollable .proteccion,
+    .sim-pv .mix .scrollable .porvenir,
+    .sim-pv .mix .scrollable .oldMutual {
+        .table-header {
+            box-shadow: none;
+        }
+    }
+
+    .sim-pv div.table-wrapper {
+        position: relative;
+        margin-bottom: 2em;
+        overflow: hidden;
+        border-right: none;
+    }
+    .sim-pv div.table-wrapper div.scrollable table {
+        margin-left: 40%;
+    }
+    .sim-pv div.table-wrapper div.scrollable {
+        //overflow: scroll;
+        overflow-y: hidden;
+    }
+
+    .sim-pv table.responsive td,
+    .sim-pv table.responsive th {
+        position: relative;
+        white-space: normal;
+        overflow: hidden;
+    }
+
+    .sim-pv .table tr td {
+        height: 76px;
+    }
+
+    .sim-pv .title-table td:nth-child(2):after,
+    .sim-pv .title-table td:nth-child(2):before {
+        top: 38px;
+    }
+
+    .sim-pv .table-input {
+        width: 100px;
+    }
+
+    .sim-pv table.responsive th:first-child,
+    .sim-pv table.responsive td:first-child,
+    .sim-pv table.responsive td:first-child,
+    .sim-pv table.responsive.pinned td {
+        display: none;
+    }
+
+    .sim-pv .tables-container .single-table {
+        margin-top: 2em;
+    }
+
+    .sim-pv .buttons-container {
+        margin: 0 auto;
+    }
+
+    .sim-pv .legend-container {
+        margin-bottom: 8px;
+        text-align: left;
+
+        ul {
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: row wrap;
+            padding-left: 0;
+
+            li {
+                width: 40%;
+                margin: 0 0 1em;
+                text-align: left;
+                //display: inline-block;
+                //margin-right: 1%;
+                //margin-bottom: 8px;
+
+                span {
+                    font-size: 10px;
+                }
+                span.chart-legend {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* Tablets */
+@media only screen and (max-width: 600px) {
+    .sim-pv .options-container {
+        justify-content: space-evenly;
+    }
+    .sim-pv .comparativo {
+        width: 70%;
+        padding: 2em 20px 2em 17%;
+        margin-bottom: 1.5em;
+
+        div {
+            left: 5%;
+        }
+    }
+    .sim-pv .icon-comparative {
+        left: 34%;
+        top: 16px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .sim-pv .table {
+        font-size: 13px;
+    }
+
+    .sim-pv .nav-item:focus,
+    .sim-pv a {
+        background: transparent;
+    }
+
+    .sim-pv .buttons-container {
+        width: 90%;
+    }
+
+}
+
+/* Phones */
+@media only screen and (max-width: 550px) {
+    .sim-pv .title-table td:nth-child(2):after,
+    .sim-pv .title-table td:nth-child(2):before {
+        content: "";
+        width: 12%;
+    }
+
+    .sim-pv .comparativo {
+        width: 100%;
+        margin: 8px 16px;
+        padding: 32px 16px 32px 22%;
+        font-size: 14px;
+        text-align: left;
+    }
+    .sim-pv .icon-comparative {
+        left: 30%;
+        top: 0;
+        width: 60px;
+        height: 60px;
+    }
+    .sim-pv .title {
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+    .sim-pv .container {
+        padding: 25px 0;
+    }
+    .sim-pv .amount_input,
+    .sim-pv .date_input,
+    .sim-pv .custom-select,
+    .sim-pv .mix .amount_input,
+    .sim-pv .mix .date_input {
+        width: 100%;
+        margin: 0 0 44px;
+    }
+
+    .sim-pv .nav-item:focus,
+    .sim-pv a:focus {
+        background: transparent;
+    }
+
+    .sim-pv .graphic {
+        min-height: 560px;
+    }
+
+    .sim-pv .container-graphs {
+        padding: 24px 16px;
+    }
+
+    .sim-pv .canvas-container {
+        height: 380px;
+    }
+
+    .sim-pv .pinned table tbody tr td {
+        padding-left: 0.5em;
+    }
+
+
+
+    // Resume Graphs
+    .sim-pv .container-resume {
+        padding: 40px 16px 10px;
+
+        .graphic {
+            height: 500px;
+        }
+    }
+
+    .sim-pv .buttons-container {
+        width: 95%;
+
+        button {
+            padding: 8px 32px;
+        }
+    }
+
+    .sim-pv .nav-link {
+        button {
+            line-height: inherit;
+
+            p {
+                margin: 0 auto;
+                display: block;
+            }
+
+            span {
+                position: relative;
+                margin: 0 auto;
+                max-width: 150px;
+                display: block;
+                height: 35px;
+
+                top: 15px;
+            }
+
+            span.long-span {
+                position: relative;
+                top: 7px;
+            }
+        }
+    }
+
+    .sim-pv .graph-title {
+        font-size: 17px;
+    }
+
+
+    .sim-pv .legend-container {
+        ul {
+            width: 100%;
+
+            li {
+                width: 45%;
+            }
+        }
+    }
+
+    .sim-pv .legend-container-mix {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 16px;
+
+        ul {
+            padding-left: 0;
+            li {
+                display: inline-block;
+                margin: 0 8px 0 0;
+                text-align: left;
+
+                span {
+                    font-size: 12px;
+                }
+                span.chart-legend {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 15px;
+                    margin-right: 5px;
+                }
+            }
+
+            li:nth-child(2) {
+                margin-left: 8px;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .sim-pv .table tr td {
+        height: 80px;
+    }
+
+    .sim-pv .title-table td:nth-child(2):after,
+    .sim-pv .title-table td:nth-child(2):before {
+        top: 40px;
+    }
+
+    .sim-pv .pinned {
+        width: 42%;
+    }
+
+    .sim-pv div.table-wrapper div.scrollable table {
+        margin-left: 42%;
+    }
+
+    // Tooltip
+    .input-tooltip > div:first-of-type {
+        width: 85%;
+    }
+
+    .sim-pv .form-tooltip .tooltip-text {
+        margin-left: -180px;
+    }
+
+    .sim-pv .form-tooltip .tooltip-text::after {
+        left: 90%;
+    }
+
+    .sim-pv .form-tooltip {
+        margin-left: 5%;
+    }
+}
+
+/* Very Small Phones */
+@media only screen and (max-width: 380px) {
+    .sim-pv .comparativo div {
+        left: 3%;
+        height: 55px;
+        width: 55px;
+    }
+
+    .sim-pv .title-table td:nth-child(2):after,
+    .sim-pv .title-table td:nth-child(2):before {
+        content: "";
+        width: 8%;
+    }
+
+    .sim-pv .buttons-container {
+        width: 100%;
+    }
+
+    .sim-pv .buttons-container button {
+        padding: 8px 1.5em;
+    }
+
+    .sim-pv .table tr td {
+        height: 90px;
+    }
+
+    .sim-pv .title-table td:nth-child(2):after,
+    .sim-pv .title-table td:nth-child(2):before {
+        top: 45px;
+    }
+
+    .sim-pv .legend-container {
+        ul li {
+            width: 50%;
+
+            span {
+                font-size: 9px;
+            }
+
+        }
+    }
+
+    .sim-pv .nav-item:focus,
+    .sim-pv a:focus {
+        background: transparent;
+    }
+}
+
+/* Smallest Phone */
+@media only screen and (max-width: 320px) {
+    .sim-pv .legend-container {
+        ul li span {
+            font-size: 8px;
+        }
+    }
+
+    .sim-pv .table tr td {
+        height: 96px;
+    }
+
+    .sim-pv .title-table td:nth-child(2):after,
+    .sim-pv .title-table td:nth-child(2):before {
+        top: 48px;
+    }
+}

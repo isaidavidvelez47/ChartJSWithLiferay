@@ -1,0 +1,7 @@
+Bundle-Name: Colfondos_HerramientaMRFVCache
+Bundle-SymbolicName: co.com.colfondos.tech.herramienta.mrfv.cache
+Bundle-Version: 1.0.0
+Export-Package: \
+	co.com.colfondos.tech.ws.cliente.funcionario.cache.delegate,\
+	co.com.colfondos.tech.ws.cliente.funcionario.cache.liferay,\
+	co.com.colfondos.tech.ws.cliente.funcionario.cache.constants\

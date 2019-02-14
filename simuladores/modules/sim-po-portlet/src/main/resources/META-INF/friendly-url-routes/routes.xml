@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 7.0.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_7_0_0.dtd">
+
+<routes>
+    <route>
+        <pattern>/datos-usuario</pattern>
+        <generated-parameter name="mvcPath">/view.jsp</generated-parameter>
+        <implicit-parameter name="p_p_lifecycle">0</implicit-parameter>
+        <implicit-parameter name="p_p_state">normal</implicit-parameter>
+        <implicit-parameter name="p_p_mode">view</implicit-parameter>
+    </route>
+
+    <route>
+        <pattern>/graficas</pattern>
+        <generated-parameter name="javax.portlet.action">saveData</generated-parameter>
+        <ignored-parameter name="p_auth"/>
+        <implicit-parameter name="p_p_lifecycle">1</implicit-parameter>
+        <implicit-parameter name="p_p_state">normal</implicit-parameter>
+        <implicit-parameter name="p_p_mode">view</implicit-parameter>
+    </route>
+
+</routes>

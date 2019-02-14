@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<div class="content">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus ac lectus in consequat.
+    In nec velit sit amet eros dapibus varius. Fusce condimentum leo nec pulvinar auctor.
+    Proin vulputate urna eu ante condimentum, id elementum urna congue. Integer nec condimentum augue,
+    rutrum imperdiet magna
+  </p>
+  <form-app [options]="options" (calcular)="calcular($event)"></form-app>
+  <tags *ngIf="btnCalculateHasBeenClicked" [barChartData]="barChartData" [lineChartData]="lineChartData"
+    [tableData]="tableData"></tags>
+</div>

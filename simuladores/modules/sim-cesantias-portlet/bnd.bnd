@@ -1,0 +1,5 @@
+Bundle-Name: sim-cesantias-portlet
+Bundle-SymbolicName: co.com.colfondos.cesantias
+Bundle-Version: 1.0.0
+Export-Package: co.com.colfondos.cesantias.constants
+Web-ContextPath: /sim-cesantias-portlet

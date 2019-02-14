@@ -1,0 +1,48 @@
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 800px;
+}
+
+.content > p {
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    line-height: 22px;
+    margin-top: 57px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content > app-form {
+    margin-top: 30px;
+}
+
+.graphics {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px auto;
+    align-items: center;
+}
+
+.graphics > .bar-canvas,
+.graphics > .line-canvas {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}

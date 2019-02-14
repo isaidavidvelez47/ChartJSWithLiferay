@@ -1,0 +1,784 @@
+.sim-po header img {
+    width: 100%;
+}
+
+.sim-po .container {
+    width: 100%;
+    margin: 0;
+    padding: 49px 109px;
+    background: #F6F6F6;
+    color: black;
+}
+
+.sim-po .form-container {
+    margin-top: 48px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px hsla(0, 0%, 0%, 0.16);
+    font-family: "open_sansregular";
+    font-size: 14px;
+}
+
+.sim-po .form-container label input::-moz-placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    font: 14px "open_sanssemibold";
+    // padding-top: 20px;
+    line-height: 37px;
+    opacity: 1;
+}
+
+.sim-po .form-container label input::-webkit-input-placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    font: 14px "open_sanssemibold";
+}
+
+.sim-po .form-container label input:-ms-input-placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    font: 14px "open_sanssemibold";
+}
+
+.sim-po .form-container label input::-ms-input-placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    font: 14px "open_sanssemibold";
+}
+
+/*
+.sim-po .form-container label input::placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    font: 14px "open_sanssemibold";
+}*/
+
+.sim-po .form-container label input:focus,
+.sim-po .form-container label input.populated {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sim-po .form-container label input:focus::-webkit-input-placeholder,
+.sim-po .form-container label input.populated::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.sim-po .form-container label input:focus:-ms-input-placeholder,
+.sim-po .form-container label input.populated:-ms-input-placeholder {
+    color: transparent;
+}
+
+.sim-po .form-container label input:focus::-ms-input-placeholder,
+.sim-po .form-container label input.populated::-ms-input-placeholder {
+    color: transparent;
+}
+
+.sim-po .form-container label input:focus::placeholder,
+.sim-po .form-container label input.populated::placeholder {
+    color: transparent;
+}
+
+.sim-po .form-container .parameters label input:focus+span,
+.sim-po .form-container .parameters label input.populated+span {
+    opacity: 1;
+    top: -25px;
+    line-height: 1;
+    background: #fff;
+    padding: 3px 0;
+}
+
+.sim-po .form-container label .span,
+.sim-po .custom-select .span {
+    color: #005276;
+    font: 14px "open_sanssemibold";
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.sim-po .custom-select .span-active {
+    opacity: 1;
+    top: -25px;
+    line-height: 1;
+    background: #fff;
+    padding: 3px 0;
+}
+
+.sim-po .button-image {
+    margin-right: 16px;
+}
+
+.sim-po form {
+    padding: 75px 97px;
+}
+
+.sim-po [class*="col-"] {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sim-po .row-flex {
+    width: 100%;
+    margin: 0;
+
+    /* flexbox setup */
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    -webkit-justify-content: space-between;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.sim-po .col-left {
+    margin-top: 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 47%;
+    padding-top: 30px;
+}
+
+.sim-po .col-right {
+    position: relative;
+    margin-top: 0;
+    display: inline-block;
+    width: 47%;
+    padding-top: 30px;
+    float: right;
+}
+
+.sim-po .age-content {
+    position: relative;
+}
+
+.sim-po .gender-age {
+    padding-bottom: 32px;
+
+    input[type=number] {
+        margin-bottom: 16px;
+        height: 40px;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+.sim-po .gender-age .col-left span,
+.sim-po .afp_type .col-left span {
+    font-size: 14px;
+    height: 30px;
+    position: relative;
+    margin-top: -25px;
+    left: 0;
+    font-family: "open_sanssemibold";
+    color: #005276;
+}
+
+.sim-po .gender-age .col-left span {
+    top: -25px;
+}
+
+.sim-po .afp_type .col-left span {
+    top: -5px;
+}
+
+.sim-po .months-input {
+    padding-left: 16px;
+}
+
+.sim-po input[type=number]::-webkit-inner-spin-button,
+.sim-po input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.sim-po .button-image {
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
+}
+
+.sim-po .slider-content {
+    padding-top: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.sim-po .slider_label {
+    position: absolute;
+    top: -5px;
+}
+
+.sim-po #max_slider {
+    right: 0;
+}
+
+.sim-po input {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+    color: black;
+    font-family: "open_sansregular";
+    font-weight: normal;
+}
+
+.sim-po sup {
+    top: -0.5em;
+    //font-size: 100%;
+    line-height: 0;
+    /* position: relative; */
+    vertical-align: baseline;
+}
+
+.sim-po h2 {
+    font-family: "open_sanssemibold";
+    font-size: 18px;
+    margin: 0;
+}
+
+.sim-po h3 {
+    font-size: 14px;
+    height: 30px;
+    margin: 0;
+    font-family: "open_sanssemibold";
+    color: #005276;
+}
+
+.sim-po .parameters {
+    margin-top: 34px;
+}
+
+.sim-po .span-description {
+    color: #666666;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+.sim-po .custom-select,
+.sim-po .currency_input {
+    position: relative;
+    margin-bottom: 70px;
+    height: 40px;
+}
+
+.sim-po .row-flex .custom-select,
+.sim-po .row-flex .currency_input {
+    position: relative;
+    margin-bottom: 70px;
+    height: 40px;
+    width: 47%;
+}
+
+/* Select box styles */
+.sim-po .custom-select select {
+    width: 100%;
+    height: 100%;
+    padding-left: 16px;
+    border: 1px solid #d3d3d3;
+    border-image: initial;
+    border-radius: 5px;
+    outline: none;
+    font: 14px "open_sanssemibold";
+    color: #999;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background: white url("../assets/icon_arrow.png") 97%/2.5% no-repeat;
+}
+
+.sim-po .custom-select select::-ms-expand {
+    display: none;
+}
+
+.sim-po .afp_type .custom-select {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.sim-po label {
+    height: 100%;
+    width: 100%;
+}
+
+.sim-po .currency_input {
+    position: relative;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    background: white url("../assets/icon_peso.png") 1.4%/0.45em no-repeat;
+}
+
+/**
+ * Slider
+ */
+.sim-po input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 30px;
+    border: none;
+    margin-top: -10px;
+}
+.sim-po input[type=range]:focus {
+    outline: none;
+}
+.sim-po input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.49), 0px 0px 1px rgba(13, 13, 13, 0.49);
+    background: #005276;
+    border-radius: 7px;
+    //border: 0.2px solid #010101;
+}
+.sim-po input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(13, 13, 13, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.41);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #e6e6e6;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5px;
+}
+.sim-po input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #009ddb;
+}
+.sim-po input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4), 0px 0px 1px rgba(13, 13, 13, 0.4);
+    background: #005276;
+    border-radius: 5px;
+    border: none;
+}
+.sim-po input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(13, 13, 13, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.41);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #e6e6e6;
+    cursor: pointer;
+}
+.sim-po input[type=range]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border:none;
+    border-radius: 3px;
+    color: transparent;
+}
+.sim-po input[type=range]::-ms-fill-lower {
+    background: #009ddb;
+    //border: 0.2px solid #010101;
+    border-radius: 3px;
+    border-color: transparent;
+    box-shadow: 1px 1px 4px 0 rgba(185, 185, 185, 1);
+}
+.sim-po input[type=range]::-ms-fill-upper {
+    background: #005276;
+    //border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    border-color: transparent;
+    box-shadow: 0 1px 4px 0 rgba(185, 185, 185, 1);
+}
+.sim-po input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(13, 13, 13, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.41);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #e6e6e6;
+    cursor: pointer;
+}
+.sim-po input[type=range]:focus::-ms-fill-lower {
+    background: #009ddb;
+}
+.sim-po input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+}
+/** End Slider */
+
+.sim-po .currency_input .icon-pesos {
+    display: inline-block;
+    width: 4%;
+    margin-left: 2%;
+    color: #d3d3d3;
+    vertical-align: middle;
+}
+
+.sim-po .currency_input input {
+    width: 90%;
+    padding-left: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.sim-po .afp_type {
+    margin-top: 0;
+}
+
+.sim-po .afp_type h2 {
+    margin-bottom: 0;
+}
+
+.sim-po .afp_type .types {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sim-po .afp_type .btn-afp {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-right: 4px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sim-po img.img-afp {
+    width: 100%;
+}
+
+.sim-po .btn-compare {
+    width: 178px;
+    height: 43px;
+    background: #005276;
+    color: #fff;
+    font-size: 16px;
+    // margin-top: 30px;
+    font-family: "open_sansregular";
+    padding: 0;
+}
+
+.sim-po .btn-compare:hover {
+    background: #009ddb;
+    color: white;
+}
+
+
+/* Vista saldoAFP */
+.sim-po .graphic-container {
+    margin-top: 48px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px hsla(0, 0%, 0%, 0.16);
+}
+
+.sim-po .nav {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 0 0 10px;
+    text-align: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.sim-po .nav:before {
+    content: "";
+    background: #ccc;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+}
+
+.sim-po .nav-item {
+    width: 33%;
+    position: relative;
+    margin-top: 15px;
+    list-style: none;
+}
+
+.sim-po .nav-item {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.sim-po .nav-link-mb {
+    display: none;
+}
+
+.sim-po .nav-link {
+    position: relative;
+    font-size: 15px;
+    color: #999;
+    text-decoration: none;
+    font-family: "open_sanssemibold";
+}
+
+.sim-po .nav-link::after {
+    content: "";
+    left: 0;
+    bottom: -10px;
+    right: 0;
+    margin: 0 auto;
+    line-height: 0;
+    position: absolute;
+    height: 3px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: width 0.5s ease 0s, height 0.5s ease 0s;
+    transition: width 0.5s ease 0s, height 0.5s ease 0s;
+    width: 5px;
+    margin: auto;
+    z-index: 9;
+    background: #005276;
+}
+
+.sim-po .nav-link:hover:after,
+.sim-po .nav-link:focus:after,
+.sim-po .nav-link.active:after {
+    opacity: 1;
+    width: 100%;
+}
+
+.sim-po .nav-item:hover:after,
+.sim-po .nav-item:focus:after {
+    opacity: 1;
+    width: 100%;
+    cursor: default;
+}
+
+.sim-po .nav-link.active,
+.sim-po .nav-link:hover,
+.sim-po .nav-link:focus {
+    color: #333;
+    cursor: pointer;
+    background-color: transparent;
+
+    span {
+        background: #005276;
+    }
+}
+
+.sim-po .nav-link span {
+    background: #999999;
+    color: #fff;
+    font-size: 14px;
+    width: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.sim-po .graphic {
+    width: 100%;
+    padding: 0 16px;
+    height: 740px;
+    margin: 32px 0;
+}
+
+.sim-po .graphic-data-container {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    margin-bottom: 16px;
+    padding: 1em;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+}
+
+.sim-po .graphic-data-container > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.sim-po .link-compare {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    padding: 0.5em 1em;
+    background: #005276;
+    border-radius: 5px;
+}
+
+.sim-po .link-compare:hover {
+    text-decoration: none;
+    background-color: #009ddb;
+}
+
+.sim-po .graphic-text-title {
+    color: #005276;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.sim-po .graphic-text-container {
+    margin-bottom: 0;
+}
+.sim-po .graphic-text-container > div {
+    display: inline-block;
+    width: 25%;
+    font-size: 14px;
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+}
+
+.sim-po .title-option {
+    display: none;
+    span {
+        font-weight: 600;
+    }
+}
+
+.sim-po .mandatory-text {
+    font-size: 12px;
+    color: #999999;
+    font-weight: 600;
+    clear: both;
+}
+
+/*
+ *
+ * Graph Styles */
+.sim-po .graph-container {
+    width: 100%;
+    min-height: 700px;
+}
+
+.sim-po .canvas-container {
+    width: 100%;
+    height: 500px;
+}
+
+.sim-po .legend-container {
+    width: 100%;
+    margin-top: 16px;
+
+    .labels-five,
+    .labels-four {
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: row wrap;
+    }
+
+    .labels-five {
+        width: 80%;
+        margin: auto;
+
+        li{
+            width: 33.3%;
+        }
+
+        li:nth-child(5) {
+            width: 66.6%;
+        }
+    }
+
+    .labels-four {
+        width: 50%;
+        margin: 0 auto;
+
+        li{
+            width: 50%;
+        }
+    }
+
+    li {
+        margin-bottom: 16px;
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 13px;
+        }
+        span.chart-legend {
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.sim-po .canvas-chart {
+    max-height: 460px;
+}
+
+
+/** Format autofill background **/
+
+@-webkit-keyframes autofill {
+    to {
+        color: black;
+        background: transparent;
+    }
+}
+
+.sim-po input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+// Disclaimer
+
+.sim-po .disclaimer-container {
+    position: relative;
+    margin-top: 8px;
+    padding-bottom: 16px;
+
+    span sup{
+        font-size: 100%;
+    }
+
+    div:first-of-type {
+        position: absolute;
+        top: 0;
+    }
+
+    div:nth-child(2) {
+        position: relative;
+        left: 8px;
+    }
+}
+
+.sim-po .disclaimer-container div > span {
+    color: #999999;
+    font-size: 11px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.sim-po .hidden {
+    display: none;
+}
+
+.sim-po .visible {
+    display: block;
+}

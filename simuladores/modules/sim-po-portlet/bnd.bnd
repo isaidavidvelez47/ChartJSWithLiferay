@@ -1,0 +1,6 @@
+Bundle-Name: Colfondos_HerramientaMRFVPO
+Bundle-SymbolicName: co.com.colfondos.herramientapo
+Bundle-Version: 1.0.0
+Export-Package: co.com.colfondos.herramientapo.constants
+Liferay-JS-Config: /META-INF/resources/js/config.js
+Web-ContextPath: /herramienta-po

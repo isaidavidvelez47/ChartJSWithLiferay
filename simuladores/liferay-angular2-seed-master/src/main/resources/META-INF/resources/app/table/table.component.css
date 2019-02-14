@@ -1,0 +1,82 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 50ms;
+    outline: none;
+}
+
+.content {
+    width: 92%;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.content > .title {
+    border: 1px solid #CCCCCC;
+    border-bottom: none;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+}
+
+.content > .title > .table-title {
+    background: white;
+    position: relative;
+    top: -10px;
+    padding: 0px 15px;
+    color: #777777;
+    font-size: 14px;
+}
+
+.content > table {
+    width: 100%;
+    margin-top: 15px;    
+    border-collapse: collapse;
+}
+
+table tr {
+    width: 100%;display: flex;
+}
+
+table tr th {
+    padding: 27px 0px;
+    color: #333333;
+    background: #F6F6F6;
+    font-size: 14px;
+    line-height: 19px;
+    height: auto;
+}
+
+table tr td {
+    padding: 15px 0px;
+    color: #777777;
+    background: #FFFFFF;
+    font-size: 14px;
+    line-height: 19px;
+    border-bottom: 1px solid #70707031;    
+    height: auto; 
+}
+
+table tr th.fondo, 
+table tr td.fondo {
+    flex: 1;
+    text-align: left;
+    padding-left: 30px;
+}
+
+table tr th.rent, 
+table tr td.rent,
+table tr th.price, 
+table tr td.price  {
+    flex: 3;
+    text-align: right;
+    padding-right: 30px;
+}
+
+
+

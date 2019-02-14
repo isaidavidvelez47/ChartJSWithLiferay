@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://funcionario.business.colfondos.com.co/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="IServiceFuncionarioService" targetNamespace="http://funcionario.business.colfondos.com.co/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://funcionario.business.colfondos.com.co/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://funcionario.business.colfondos.com.co/">
+<xs:element name="InternalFault" type="tns:internalFault"/>
+<xs:element name="baseControlRequest" type="tns:baseControlRequest"/>
+<xs:element name="consultarDatosGraficaRentabilidadCE" type="tns:consultarDatosGraficaRentabilidadCE"/>
+<xs:element name="consultarDatosGraficaRentabilidadCEControlRequest" type="tns:consultarDatosGraficaRentabilidadCEControlRequest"/>
+<xs:element name="consultarDatosGraficaRentabilidadCERequest" type="tns:consultarDatosGraficaRentabilidadCERequest"/>
+<xs:element name="consultarDatosGraficaRentabilidadCEResponse" type="tns:consultarDatosGraficaRentabilidadCEResponse"/>
+<xs:element name="consultarEdadPension" type="tns:consultarEdadPension"/>
+<xs:element name="consultarEdadPensionControlRequest" type="tns:consultarEdadPensionControlRequest"/>
+<xs:element name="consultarEdadPensionControlResponse" type="tns:consultarEdadPensionControlResponse"/>
+<xs:element name="consultarEdadPensionResponse" type="tns:consultarEdadPensionResponse"/>
+<xs:element name="consultarEdadPensionSimpleRequest" type="tns:consultarEdadPensionSimpleRequest"/>
+<xs:element name="consultarEdadPensionSimpleResponse" type="tns:consultarEdadPensionSimpleResponse"/>
+<xs:element name="consultarParametrosHerramientasFV" type="tns:consultarParametrosHerramientasFV"/>
+<xs:element name="consultarParametrosHerramientasFVControlRequest" type="tns:consultarParametrosHerramientasFVControlRequest"/>
+<xs:element name="consultarParametrosHerramientasFVResponse" type="tns:consultarParametrosHerramientasFVResponse"/>
+<xs:element name="consultarParametrosHerramientasFVSimpleRequest" type="tns:consultarParametrosHerramientasFVSimpleRequest"/>
+<xs:element name="consultarRentaPortafolio" type="tns:consultarRentaPortafolio"/>
+<xs:element name="consultarRentaPortafolioControlRequest" type="tns:consultarRentaPortafolioControlRequest"/>
+<xs:element name="consultarRentaPortafolioRequest" type="tns:consultarRentaPortafolioRequest"/>
+<xs:element name="consultarRentaPortafolioResponse" type="tns:consultarRentaPortafolioResponse"/>
+<xs:element name="consultarSalarioMinimo" type="tns:consultarSalarioMinimo"/>
+<xs:element name="consultarSalarioMinimoControlRequest" type="tns:consultarSalarioMinimoControlRequest"/>
+<xs:element name="consultarSalarioMinimoRequest" type="tns:consultarSalarioMinimoRequest"/>
+<xs:element name="consultarSalarioMinimoResponse" type="tns:consultarSalarioMinimoResponse"/>
+<xs:element name="edades" type="tns:edades"/>
+<xs:element name="fechasDatosPortafolios" type="tns:fechasDatosPortafolios"/>
+<xs:element name="rentaPortafolioVO" type="tns:rentaPortafolioVO"/>
+<xs:element name="rentabilidadCE" type="tns:rentabilidadCE"/>
+<xs:element name="responseConsultarDatosGraficaRentabilidadCE" type="tns:responseConsultarDatosGraficaRentabilidadCE"/>
+<xs:element name="responseConsultarParametrosHerramientasFV" type="tns:responseConsultarParametrosHerramientasFV"/>
+<xs:element name="responseConsultarRentaPortafolio" type="tns:responseConsultarRentaPortafolio"/>
+<xs:element name="salarioMinimo" type="tns:salarioMinimo"/>
+<xs:element name="salariosMinimos" type="tns:salariosMinimos"/>
+<xs:complexType name="consultarEdadPension">
+<xs:sequence>
+<xs:element minOccurs="0" name="ConsultarEdadPensionSimpleRequest" type="tns:consultarEdadPensionSimpleRequest"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="consultarEdadPensionSimpleRequest">
+<xs:complexContent>
+<xs:extension base="tns:baseRequest">
+<xs:sequence>
+<xs:element name="control" type="tns:consultarEdadPensionControlRequest"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="baseRequest">
+<xs:sequence/>
+</xs:complexType>
+<xs:complexType name="consultarEdadPensionControlRequest">
+<xs:complexContent>
+<xs:extension base="tns:baseControlRequest">
+<xs:sequence/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="baseControlRequest">
+<xs:sequence>
+<xs:element name="canal" type="xs:string"/>
+<xs:element name="identificadorDeTransaccion" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="consultarEdadPensionResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="ConsultarEdadPensionSimpleResponse" type="tns:consultarEdadPensionSimpleResponse"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="consultarEdadPensionSimpleResponse">
+<xs:complexContent>
+<xs:extension base="tns:consultarEdadPensionSimpleRequest">
+<xs:sequence>
+<xs:element name="controlResponse" type="tns:consultarEdadPensionControlResponse"/>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="edades" type="tns:edades"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="consultarEdadPensionControlResponse">
+<xs:complexContent>
+<xs:extension base="tns:consultarEdadPensionControlRequest">
+<xs:sequence/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="edades">
+<xs:sequence>
+<xs:element name="edadJubilacionMujer" type="xs:int"/>
+<xs:element name="edadJubilacionHombre" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="internalFault">
+<xs:sequence>
+<xs:element name="component" type="xs:string"/>
+<xs:element name="mensajeId" type="xs:string"/>
+<xs:element name="servicioCode" type="xs:string"/>
+<xs:element name="errorCode" type="xs:string"/>
+<xs:element name="tecnicalDescription" type="xs:string"/>
+<xs:element name="userDescription" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="consultarParametrosHerramientasFV">
+<xs:sequence>
+<xs:element minOccurs="0" name="ConsultarParametrosHerramientasFVSimpleRequest" type="tns:consultarParametrosHerramientasFVSimpleRequest"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="consultarParametrosHerramientasFVSimpleRequest">
+<xs:complexContent>
+<xs:extension base="tns:baseRequest">
+<xs:sequence>
+<xs:element name="control" type="tns:consultarParametrosHerramientasFVControlRequest"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="consultarParametrosHerramientasFVControlRequest">
+<xs:complexContent>
+<xs:extension base="tns:baseControlRequest">
+<xs:sequence/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="consultarParametrosHerramientasFVResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="ResponseConsultarParametrosHerramientasFV" type="tns:responseConsultarParametrosHerramientasFV"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="responseConsultarParametrosHerramientasFV">
+<xs:sequence>
+<xs:element minOccurs="0" name="codMensajeResp" type="xs:string"/>
+<xs:element minOccurs="0" name="desMensajeResp" type="xs:string"/>
+<xs:element maxOccurs="unbounded" name="fechas" type="tns:fechasDatosPortafolios"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="fechasDatosPortafolios">
+<xs:sequence>
+<xs:element minOccurs="0" name="ultimaFecha" type="xs:string"/>
+<xs:element minOccurs="0" name="portafolio" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="consultarSalarioMinimo">
+<xs:sequence>
+<xs:element name="ConsultarSalarioMinRequest" type="tns:consultarSalarioMinimoRequest"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="consultarSalarioMinimoRequest">
+<xs:complexContent>
+<xs:extension base="tns:baseRequest">
+<xs:sequence>
+<xs:element name="control" type="tns:consultarSalarioMinimoControlRequest"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="consultarSalarioMinimoControlRequest">
+<xs:complexContent>
+<xs:extension base="tns:baseControlRequest">
+<xs:sequence>
+<xs:element name="fecSig" type="xs:string"/>
+<xs:element minOccurs="0" name="regRet" type="xs:string"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="consultarSalarioMinimoResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="ConsultarSalarioMinResponse" type="tns:salariosMinimos"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="salariosMinimos">
+<xs:complexContent>
+<xs:extension base="tns:consultarSalarioMinimoRequest">
+<xs:sequence>
+<xs:element minOccurs="0" name="salarios">
+<xs:complexType>
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="salario" type="tns:salarioMinimo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element minOccurs="0" name="codigoError" type="xs:string"/>
+<xs:element minOccurs="0" name="descripcionError" type="xs:string"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="salarioMinimo">
+<xs:sequence>
+<xs:element minOccurs="0" name="ahno" type="xs:string"/>
+<xs:element minOccurs="0" name="valor" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="consultarRentaPortafolio">
+<xs:sequence>
+<xs:element minOccurs="0" name="ConsultarRentaPortafolioRequest" type="tns:consultarRentaPortafolioRequest"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="consultarRentaPortafolioRequest">
+<xs:complexContent>
+<xs:extension base="tns:baseRequest">
+<xs:sequence>
+<xs:element name="control" type="tns:consultarRentaPortafolioControlRequest"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="consultarRentaPortafolioControlRequest">
+<xs:complexContent>
+<xs:extension base="tns:baseControlRequest">
+<xs:sequence>
+<xs:element name="producto" type="xs:string"/>
+<xs:element minOccurs="0" name="fechaCorte" type="xs:string"/>
+<xs:element minOccurs="0" name="salario" type="xs:double"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="consultarRentaPortafolioResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="ResponseConsultarRentaPortafolio" type="tns:responseConsultarRentaPortafolio"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="responseConsultarRentaPortafolio">
+<xs:sequence>
+<xs:element minOccurs="0" name="codMensajeResp" type="xs:string"/>
+<xs:element minOccurs="0" name="desMensajeResp" type="xs:string"/>
+<xs:element maxOccurs="unbounded" name="rentaPortafolio" type="tns:rentaPortafolioVO"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="rentaPortafolioVO">
+<xs:sequence>
+<xs:element minOccurs="0" name="idRentaPortafolio" type="xs:string"/>
+<xs:element minOccurs="0" name="productoRentaPortafolio" type="xs:string"/>
+<xs:element minOccurs="0" name="tipoProyeccionRentaPortafolio" type="xs:string"/>
+<xs:element minOccurs="0" name="portafolioRentaPortafolio" type="xs:string"/>
+<xs:element minOccurs="0" name="tipoValor" type="xs:string"/>
+<xs:element minOccurs="0" name="meses" type="xs:string"/>
+<xs:element minOccurs="0" name="colfondosRentaPortafolio" type="xs:double"/>
+<xs:element minOccurs="0" name="porvenirRentaPortafolio" type="xs:double"/>
+<xs:element minOccurs="0" name="proteccionRentaPortafolio" type="xs:double"/>
+<xs:element minOccurs="0" name="old_mutualRentaPortafolio" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="consultarDatosGraficaRentabilidadCE">
+<xs:sequence>
+<xs:element minOccurs="0" name="ConsultarDatosGraficaRentabilidadCERequest" type="tns:consultarDatosGraficaRentabilidadCERequest"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="consultarDatosGraficaRentabilidadCERequest">
+<xs:complexContent>
+<xs:extension base="tns:baseRequest">
+<xs:sequence>
+<xs:element name="control" type="tns:consultarDatosGraficaRentabilidadCEControlRequest"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="consultarDatosGraficaRentabilidadCEControlRequest">
+<xs:complexContent>
+<xs:extension base="tns:baseControlRequest">
+<xs:sequence>
+<xs:element minOccurs="0" name="proyeccion" type="xs:string"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="consultarDatosGraficaRentabilidadCEResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="ResponseConsultarDatosGraficaRentabilidadCE" type="tns:responseConsultarDatosGraficaRentabilidadCE"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="responseConsultarDatosGraficaRentabilidadCE">
+<xs:sequence>
+<xs:element minOccurs="0" name="codMensajeResp" type="xs:string"/>
+<xs:element minOccurs="0" name="desMensajeResp" type="xs:string"/>
+<xs:element maxOccurs="unbounded" name="rentaPortafolio" type="tns:rentabilidadCE"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="rentabilidadCE">
+<xs:sequence>
+<xs:element minOccurs="0" name="fechaFinal" type="xs:string"/>
+<xs:element minOccurs="0" name="colfondosLargoPlazo" type="xs:double"/>
+<xs:element minOccurs="0" name="colfondosCortoPlazo" type="xs:double"/>
+<xs:element minOccurs="0" name="colfondosRentaEA" type="xs:double"/>
+<xs:element minOccurs="0" name="porvenirRentaEA" type="xs:double"/>
+<xs:element minOccurs="0" name="proteccionRentaEA" type="xs:double"/>
+<xs:element minOccurs="0" name="old_mutualRentaEA" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="InternalException" nillable="true" type="tns:internalFault"/>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="consultarParametrosHerramientasFVResponse">
+    <wsdl:part element="tns:consultarParametrosHerramientasFVResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarSalarioMinimoResponse">
+    <wsdl:part element="tns:consultarSalarioMinimoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarSalarioMinimo">
+    <wsdl:part element="tns:consultarSalarioMinimo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarDatosGraficaRentabilidadCE">
+    <wsdl:part element="tns:consultarDatosGraficaRentabilidadCE" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarParametrosHerramientasFV">
+    <wsdl:part element="tns:consultarParametrosHerramientasFV" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarEdadPensionResponse">
+    <wsdl:part element="tns:consultarEdadPensionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarEdadPension">
+    <wsdl:part element="tns:consultarEdadPension" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarDatosGraficaRentabilidadCEResponse">
+    <wsdl:part element="tns:consultarDatosGraficaRentabilidadCEResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarRentaPortafolio">
+    <wsdl:part element="tns:consultarRentaPortafolio" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InternalException">
+    <wsdl:part element="tns:InternalException" name="InternalException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarRentaPortafolioResponse">
+    <wsdl:part element="tns:consultarRentaPortafolioResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IServiceFuncionario">
+    <wsdl:operation name="consultarEdadPension">
+      <wsdl:input message="tns:consultarEdadPension" name="consultarEdadPension">
+    </wsdl:input>
+      <wsdl:output message="tns:consultarEdadPensionResponse" name="consultarEdadPensionResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:InternalException" name="InternalException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarParametrosHerramientasFV">
+      <wsdl:input message="tns:consultarParametrosHerramientasFV" name="consultarParametrosHerramientasFV">
+    </wsdl:input>
+      <wsdl:output message="tns:consultarParametrosHerramientasFVResponse" name="consultarParametrosHerramientasFVResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:InternalException" name="InternalException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSalarioMinimo">
+      <wsdl:input message="tns:consultarSalarioMinimo" name="consultarSalarioMinimo">
+    </wsdl:input>
+      <wsdl:output message="tns:consultarSalarioMinimoResponse" name="consultarSalarioMinimoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:InternalException" name="InternalException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarRentaPortafolio">
+      <wsdl:input message="tns:consultarRentaPortafolio" name="consultarRentaPortafolio">
+    </wsdl:input>
+      <wsdl:output message="tns:consultarRentaPortafolioResponse" name="consultarRentaPortafolioResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:InternalException" name="InternalException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosGraficaRentabilidadCE">
+      <wsdl:input message="tns:consultarDatosGraficaRentabilidadCE" name="consultarDatosGraficaRentabilidadCE">
+    </wsdl:input>
+      <wsdl:output message="tns:consultarDatosGraficaRentabilidadCEResponse" name="consultarDatosGraficaRentabilidadCEResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:InternalException" name="InternalException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IServiceFuncionarioServiceSoapBinding" type="tns:IServiceFuncionario">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="consultarEdadPension">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarEdadPension">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarEdadPensionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InternalException">
+        <soap:fault name="InternalException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarParametrosHerramientasFV">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarParametrosHerramientasFV">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarParametrosHerramientasFVResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InternalException">
+        <soap:fault name="InternalException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSalarioMinimo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarSalarioMinimo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarSalarioMinimoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InternalException">
+        <soap:fault name="InternalException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarRentaPortafolio">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarRentaPortafolio">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarRentaPortafolioResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InternalException">
+        <soap:fault name="InternalException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosGraficaRentabilidadCE">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarDatosGraficaRentabilidadCE">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarDatosGraficaRentabilidadCEResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InternalException">
+        <soap:fault name="InternalException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IServiceFuncionarioService">
+    <wsdl:port binding="tns:IServiceFuncionarioServiceSoapBinding" name="IServiceFuncionarioPort">
+      <soap:address location="http://172.18.160.212:63110/Funcionario"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

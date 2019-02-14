@@ -1,0 +1,17 @@
+<div class="content">
+    <div class="title">
+        <p class="table-title">{{ tableData.title }}</p>
+    </div>
+    <table>
+        <tr>
+            <th class="fondo">AFP's</th>
+            <th class="rent">{{ titleRent }}</th>
+            <th class="price">{{ titlePrice }}</th>
+        </tr>
+        <tr *ngFor="let fondo of fondos">
+            <td class="fondo">{{fondo.name}}</td>
+            <td class="rent">{{fondo.rent}} %</td>
+            <td class="price">{{ fondo.price | currency }}</td>
+        </tr>
+    </table>
+</div>

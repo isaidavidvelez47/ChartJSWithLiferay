@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 7.0.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_7_0_0.dtd">
+
+<routes>
+    <route>
+        <pattern>/eleccion-comparativo</pattern>
+        <generated-parameter name="mvcPath">/index.jsp</generated-parameter>
+        <implicit-parameter name="p_p_lifecycle">0</implicit-parameter>
+        <implicit-parameter name="p_p_state">normal</implicit-parameter>
+        <implicit-parameter name="p_p_mode">view</implicit-parameter>
+    </route>
+
+    <route>
+        <pattern>/comparativo</pattern>
+        <generated-parameter name="mvcPath">/comparativo.jsp</generated-parameter>
+        <implicit-parameter name="p_p_lifecycle">0</implicit-parameter>
+        <implicit-parameter name="p_p_state">normal</implicit-parameter>
+        <implicit-parameter name="p_p_mode">view</implicit-parameter>
+    </route>
+
+    <route>
+        <pattern>/comparativo-mix</pattern>
+        <generated-parameter name="mvcPath">/comparativoMix.jsp</generated-parameter>
+        <implicit-parameter name="p_p_lifecycle">0</implicit-parameter>
+        <implicit-parameter name="p_p_state">normal</implicit-parameter>
+        <implicit-parameter name="p_p_mode">view</implicit-parameter>
+    </route>
+</routes>

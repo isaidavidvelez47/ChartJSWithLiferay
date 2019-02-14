@@ -1,0 +1,69 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 150ms;
+    outline: none;
+}
+
+.content {
+    display: flex;
+    max-width: 1200px;
+    min-width: 800px;
+    border-style: none !important;
+    margin-top: 50px;
+    flex-direction: column;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    margin-bottom: 122px;
+}
+
+.header-table {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-table > .tag {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0px;
+    cursor: pointer;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.header-table > .tag.active {
+    border-bottom: 3px solid #005276;
+}
+
+.header-table > .tag > .num-tag {
+    background: #999999;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 24px;
+}
+
+.header-table > .tag.active > .num-tag {
+    background: #005276;
+    font-weight: bold;
+}
+
+.header-table > .tag > .text-tag {
+    color: #999999;
+    font-size: 16px;
+}
+
+.header-table > .tag.active > .text-tag {
+    color: #333333;
+}
