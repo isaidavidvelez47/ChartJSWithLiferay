@@ -1,4 +1,41 @@
 .bar-canvas {
     width: 80%;
     margin: 70px auto 90px;
+    display: flex;
+}
+
+.graphic {
+    flex: 2;
+    height: 100%;
+}
+
+.graphic > canvas {
+    height: 100%;
+}
+
+.values-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    
+}
+
+th {
+    color: #777777;
+    text-align: center;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 15px 20px;
+}
+
+td {
+    color: #333333;
+    text-align: center;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 13px 20px;
 }

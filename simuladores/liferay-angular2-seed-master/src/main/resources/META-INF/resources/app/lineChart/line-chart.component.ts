@@ -24,11 +24,11 @@ export class LineChartComponent implements OnInit  {
 
   getRentPointsFromService(data) {
     this._statistics.getLinealRents(data.idProjection).subscribe(res => {
-      this.setLineGraphic(res);
+      this.setLineGraphic(res, data);
     });
   }
 
-  setLineGraphic(data) {
+  setLineGraphic(data, selectedOption) {
     // Le borra el caché de la gráfica que estaba anteriormente
     if (this.LineChart) {
       this.LineChart.destroy();
@@ -40,20 +40,39 @@ export class LineChartComponent implements OnInit  {
         // Lista los 4 fondos
         labels: this.getLabelsForLineGraphic(data.profitability),
         // Pinta en la gráfica todos los puntitos en sus respectivos meses
-        datasets: this.getDataForLineGraphic(data),
+        datasets: this.getDataForLineGraphic(data, selectedOption.idProjection),
       },
       options: {
         title: {
-          text: 'Cesantías corto plazo',
+          text: selectedOption.textLine,
           display: true
         },
         scales: {
+          xAxes: [{
+            gridLines: {
+              display: false,
+              drawBorder: true
+            }
+          }],
           yAxes: [{
+            gridLines: {
+              display: true,
+              drawBorder: true
+            },
             ticks: {
               beginAtZero: false
             }
           }]
         }
+        /*scales: {
+          yAxes: [{
+            ticks: {
+              min: 0,
+              max: 10,
+              stepSize: 1
+            }
+          }]
+        }*/
       }
     });
   }
@@ -68,48 +87,54 @@ export class LineChartComponent implements OnInit  {
     return vec;
   }
 
-  getDataForLineGraphic(data) {
+  getDataForLineGraphic(data, idProjection) {
     const backgrounds = [
-      'rgba(0, 82, 118, 1)',
-      'rgba(99, 152, 62, 0.6)',
-      'rgba(209, 110, 43, 0.6)',
-      'rgba(224, 169, 0, 0.6)'
+      '#D8126A',
+      '#005276',
+      '#33A300',
+      '#C99648'
     ];
 
     const borders = [
-      'rgba(0, 82, 118, 0.6)',
-      'rgba(123, 191, 78, 0.6)',
-      'rgba(255, 138, 54, 0.6)',
-      'rgba(255, 212, 0, 0.6)'
+      '#D8126A',
+      '#005276',
+      '#33A300',
+      '#C99648'
     ];
 
     const vec = [];
+
+    let minifiedText = '';
+
+    if (idProjection === 'CORTO_LARGO_PLAZO_24M') {
+      minifiedText = 'colfondos';
+    }
 
     data.labels.forEach((fondo, index) => {
       vec.push(
         this.createLabel(
           fondo,
-          this.simplifyText(fondo),
+          this.simplifyText(minifiedText + fondo),
           backgrounds[index],
           borders[index],
           2,
-          true,
+          false,
           0.2,
           data
         )
       );
     });
-
-    console.log(vec);
     return vec;
   }
 
   simplifyText(text: string): string {
-    console.log(text);
-    text = text.trim();
-    text = text.toLowerCase();
-    text = text.replace(/\ /g, '');
-    console.log(text);
+    if (text.includes('colfondos')) {
+      text = text.replace(/\ /g, '');
+    } else {
+      text = text.trim();
+      text = text.toLowerCase();
+      text = text.replace(/\ /g, '');
+    }
     return text;
   }
 
@@ -118,10 +143,9 @@ export class LineChartComponent implements OnInit  {
       label: label,
       // Enlista toda la linea de tiempo de puntos del fondo
       data: this.getPoints(data.profitability, name),
-      backgroundColor: this.gradient(background),
+      backgroundColor: background,
       borderColor: borderColor,
       borderWidth: borderWidth,
-      pointColor: '#000000',
       fill: fill,
       lineTension: lineTension,
     };

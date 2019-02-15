@@ -34,11 +34,17 @@
     align-items: center;
     padding: 16px 0px;
     cursor: pointer;
-    border-bottom: 1px solid #CCCCCC;
+    background: rgb(230, 230, 230);
+    -webkit-box-shadow: inset 0px -1px 6px 0px rgba(0,0,0,0.08);
+    -moz-box-shadow: inset 0px -1px 6px 0px rgba(0,0,0,0.08);
+    box-shadow: inset 0px -1px 6px 0px rgba(0,0,0,0.08);
 }
 
 .header-table > .tag.active {
-    border-bottom: 3px solid #005276;
+    background: white;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 .header-table > .tag > .num-tag {
@@ -54,14 +60,14 @@
     margin-right: 24px;
 }
 
-.header-table > .tag.active > .num-tag {
-    background: #005276;
-    font-weight: bold;
-}
-
 .header-table > .tag > .text-tag {
     color: #999999;
     font-size: 16px;
+}
+
+.header-table > .tag.active > .num-tag {
+    background: #005276;
+    font-weight: bold;
 }
 
 .header-table > .tag.active > .text-tag {

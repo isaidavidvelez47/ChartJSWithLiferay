@@ -1,3 +1,17 @@
-<div class="bar-canvas" style="width: 700px; height: 50%">
-    <canvas id="barChart"></canvas>
-</div>
+<div class="bar-canvas">
+    <div class="graphic">
+        <canvas id="barChart"></canvas>
+    </div>  
+    <div class="values-container">
+      <table>
+        <tr>
+          <th>Saldo final</th>
+          <th>Rentabilidad</th>
+        </tr>
+        <tr *ngFor="let fondo of fondos">
+          <td>$ {{ fondo.price | number:'.0-0' }}</td>
+          <td>{{ fondo.rent | number:'.2-2'}} %</td>
+        </tr>
+      </table>
+    </div>
+  </div>
